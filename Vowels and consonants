@@ -1,0 +1,29 @@
+class Vowelsconsonants {
+    public static void main(String[] args) {
+        String name = "Engineering";
+        int len = name.length();
+        char a[] = new char[len];
+        char vowels[] = new char[len];
+        char consonants[] = new char[len];
+        int v = 0, c = 0;
+        for(int i = 0;i<len;i++){
+            a[i] = name.charAt(i);
+            if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U'){
+                vowels[v] = a[i];
+                v++;
+            }
+            else{
+                consonants[c] = a[i];
+                c++;
+            }
+        }
+        System.out.print("Vowels : ");
+        for(int i = 0;i<v;i++){
+            System.out.print(vowels[i]+" ");
+        }
+        System.out.print("\nConsonants : ");
+        for(int i = 0;i<c;i++){
+            System.out.print(consonants[i]+" ");
+        }
+    }
+}
